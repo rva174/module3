@@ -1,54 +1,31 @@
+calls = 0
+
+def count_calls():
+    global calls
+
+    calls += 1
+
+def string_info(string):
+    string = ('Urban')
+    string_info = (len(string), [string.upper(), string.lower()])
+    print(string_info)
 
 
-#calls = 0
-#def count_calls(func):
+    count_calls()
 
-
-
-#def string_info(list):
-
-string_info = 'Urban'
-string_info = (len(string_info), string_info.lower(), string_info.upper())
-print(string_info)
-
-
-
-
-
-#any(farm in is_contains for item in my_string)
-
-is_contains =  ('farm', ['horse', 'cow'])
-print(is_contains)
-
-bool = True
-
-for string in is_contains:
-    if string in is_contains:
-        if string == 'farm':
-            print(bool)
-            print('yes')
-        if string != 'farm':
-            bool = False
-            print(bool)
-            print('no')
-
-
-################################
-
-def is_contains(a, b):
-    bool = True
-
-    for string in is_contains:
-        if string in is_contains:
-            if string == 'farm':
-                print(bool)
-                print('yes')
-            if string != 'farm':
-                bool = False
-                print(bool)
-                print('no')
+    return string
 
 
 
+def is_contains(string, list_to_search):
+    string = string.lower()
+    list_to_search = [value.lower() for value in list_to_search]
 
+    count_calls()
 
+    return string in list_to_search
+
+#print(string_info('Capybara'))
+print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN'])) # Urban ~ urBAN
+print(is_contains('cycle', ['recycling', 'cyclic'])) # No matches
+print(calls)
