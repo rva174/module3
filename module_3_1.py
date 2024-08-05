@@ -1,37 +1,46 @@
-calls = 0
 
+calls = 0
 def count_calls():
-    calls = 0
-    calls =  calls + 1
-pass
+    calls = calls + 1
+
+
+    return calls
+
+
 def string_info(string):
 
-    input(string)
-    string = 'Urban'
+#    global calls
+ #   count_calls()
+ #   calls = calls + 1
 
-    print(string = (len(string), string.upper(), string.lower()))
+    string_info = (len(string), string.upper(), string.lower())
+    print(string_info)
 
-
-    count_calls()
-
-
-    return string
-    string_info(string)
+    return string_info
 
 def is_contains(string, list_to_search):
+
     string = string.lower()
-    list_to_search = [value.lower() for value in list_to_search]
-    print(is_contains)
-    count_calls() == 'forward'
+    list_to_search = [s.lower() for s in (list_to_search)]
+    print(string, list_to_search)
+
+    res = string in list_to_search
+    print(res)
+ #   calls == calls + 1
+  #
+#    calls
+#    count_calls()
+
+ #   global(calls)
+  #  calls += 1
+
+    return res
+
+string_info('Urban')
+string_info('Univercity')
+
+is_contains('CiTy', ['CitY', 'STreet'])
+is_contains('GARden', ['AppLe', 'PEar', 'CherRY'])
+print(calls)
 
 
-
-
-    return string in list_to_search
-
-
-
-#print(string_info('Capybara'))
-#print(is_contains('Urban', ['ban', 'BaNaN', 'urBAN'])) # Urban ~ urBAN
-#print(is_contains('cycle', ['recycling', 'cyclic'])) # No matches
-#print(calls)
