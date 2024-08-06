@@ -1,20 +1,18 @@
-
 calls = 0
-def count_calls():
-    calls = calls + 1
-
-
-    return calls
+def count_calls(calls):
+ #  global calls
+ #  calls += 1
+   return calls
 
 
 def string_info(string):
 
-#    global calls
- #   count_calls()
- #   calls = calls + 1
-
     string_info = (len(string), string.upper(), string.lower())
     print(string_info)
+
+    global calls
+    count_calls(calls)
+    calls += 1
 
     return string_info
 
@@ -26,13 +24,10 @@ def is_contains(string, list_to_search):
 
     res = string in list_to_search
     print(res)
- #   calls == calls + 1
-  #
-#    calls
-#    count_calls()
 
- #   global(calls)
-  #  calls += 1
+    global calls
+    count_calls(calls)
+    calls += 1
 
     return res
 
