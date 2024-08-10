@@ -1,55 +1,24 @@
-calls = 0
+# Способы вызова функции
+def send_email(message, recipient, *, sender="univercity.help@gmail.com"):
 
-#count_calls(calls)
-#global calls
+    if sender == 'univercity.help@gmail.com':
+        print(f'"Письмо успешно отправлено с адреса {sender} на адрес {recipient}"')
 
-calls = 0
-
-
-####
-
-#input(f"{string})
-string = 'GeLaTin'
-string_info = (len(string), string.upper(), string.lower())
-print(string_info)
-string1 = 'Urban'
-string_info = (len(string1), string1.upper(), string1.lower())
-print(string_info)
-
-#count_calls()
-
-print(calls)
-
-#return string
-#string_info(string)
+    elif recipient == sender:
+        print(f'"Нельзя отправить письмо самому себе!"')
 
 
-string = 's0kEr'
-list_to_search = ['forWard', 'goal', 'SparTAK']
-is_contains = (string, list_to_search)
-print(is_contains)
+    elif (("@" and (".com" or ".ru" or ".net")) not in recipient
+          and ("@" and (".com" or ".ru" or ".net")) not in sender):
+        print(f'"Невозможно отправить письмо с адреса {sender} на адрес {recipient}"')
 
-string = string.lower()
-list_to_search = [value.lower() for value in list_to_search]
-print(is_contains)
-
-string == 'forward' # для сравнения
-
-string == 'horse'   # ля сравнения
-
-calls = calls + 1
-print(calls)
-
-#return string in list_to_searc
+    else:
+        print(f'"НЕСТАНДАРТНЫЙ ОТПРАВИТЕЛЬ! Письмо отправлено с адреса {sender} на адрес {recipient}"')
 
 
+send_email('Это сообщение для проверки связи', 'vasyok1337@gmail.com')
+send_email('Вы видите это сообщение как лучший студент курса!', 'urban.fan@mail.ru', sender='urban.info@gmail.com')
+send_email('Пожалуйста, исправьте задание', 'urban.student@mail.ru', sender='urban.teacher@mail.uk')
+send_email('Напоминаю самому себе о вебинаре', 'urban.teacher@mail.ru', sender='urban.teacher@mail.ru')
 
 
-
-#print(is_contains)
-#count_calls()
-
-
-#    return string in list_to_searc
-
-#is_contains(string, list_to_search)
