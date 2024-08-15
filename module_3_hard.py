@@ -1,5 +1,4 @@
 def calculate_structure_sum(data_structure):
-
     if isinstance(data_structure,int):
         return data_structure
     elif isinstance(data_structure,str):
@@ -8,10 +7,9 @@ def calculate_structure_sum(data_structure):
            isinstance(data_structure,tuple) or
            isinstance(data_structure,set) ):
         sum = 0
-        for item in data_structure:
-            sum += calculate_structure_sum(item)
+        for elem in data_structure:
+            sum += calculate_structure_sum(elem)
         return sum
-
     elif isinstance(data_structure,dict):
         sum = 0
         for key,value in data_structure.items():
@@ -29,3 +27,4 @@ data_structure = [[1, 2, 3],
 
 result = calculate_structure_sum(data_structure)
 print("Сумма всех чисел и длин всех строк: ", result)
+
