@@ -2,6 +2,7 @@
 def send_email(message, recipient, *, sender="univercity.help@gmail.com"):
 
 
+
     if (("@" or ".com" or ".ru" or ".net") not in sender or ("@" or ".com" or ".ru" or ".net") not in recipient):
         print(f'"Невозможно отправить письмо с адреса {sender} на адрес {recipient}"')
 
